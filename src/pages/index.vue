@@ -12,7 +12,6 @@ const currentEngine = reactive<Engine>({
 });
 
 onMounted(() => {
-  console.log(engines[0]);
   Object.assign(
     currentEngine,
     JSON.parse(localStorage.getItem("engine") || JSON.stringify(engines[0]))
