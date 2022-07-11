@@ -1,0 +1,32 @@
+[
+  {
+    "label": "crates",
+    "url": "https://crates.io/search?q=",
+    "icon": "i-simple-icons-rust"
+  },
+  {
+    "label": "go-pkg",
+    "url": "https://pkg.go.dev/search?q=",
+    "icon": "i-simple-icons-goland"
+  },
+  {
+    "label": "maven",
+    "url": "https://search.maven.org/search?q=",
+    "icon": "i-simple-icons-apachemaven"
+  },
+  {
+    "label": "npm",
+    "url": "https://www.npmjs.com/search?q=",
+    "icon": "i-simple-icons-npm"
+  },
+  {
+    "label": "nuget",
+    "url": "https://www.nuget.org/packages?q=",
+    "icon": "i-simple-icons-nuget"
+  },
+  {
+    "label": "pypi",
+    "url": "https://pypi.org/search/?q=",
+    "icon": "i-simple-icons-pypi"
+  }
+]
