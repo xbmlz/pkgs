@@ -12,11 +12,20 @@ const currentEngine = reactive<Engine>({
 });
 
 onMounted(() => {
+  addEventListener("click", closeEngine);
   Object.assign(
     currentEngine,
     JSON.parse(localStorage.getItem("engine") || JSON.stringify(engines[0]))
   );
 });
+
+onUnmounted(() => {
+  removeEventListener("click", closeEngine);
+});
+
+const closeEngine = () => {
+  engineIsVisible.value = false;
+};
 
 const useEngine = (engine: any) => {
   localStorage.setItem("engine", JSON.stringify(engine));
@@ -65,6 +74,7 @@ const search = () => {
         items-center
         cursor-pointer
         @click="engineIsVisible = !engineIsVisible"
+        @click.stop
       >
         <div text-xl :class="currentEngine.icon" />
         <div
@@ -110,6 +120,7 @@ const search = () => {
       dark:border-dark-200
       z-750
       v-show="engineIsVisible"
+      @click.stop
     >
       <li
         v-for="(item, index) in engines"

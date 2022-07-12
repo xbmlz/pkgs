@@ -5,3 +5,5 @@ export const engines: Engine[] = engineRaw.map((e) => ({
   url: e.url,
   icon: e.icon,
 }));
+
+export const icons: string[] = engineRaw.map((e) => e.icon);
